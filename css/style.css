@@ -1,0 +1,301 @@
+/* Common
+--------------------------------------------------------*/
+
+::-moz-selection {background: #7B133C;color: white; }
+::selection {background: #7B133C;color: white; }
+
+body {
+    font: 15px 'Oswald', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-align: left;
+    background: #111111;
+    width: 100%;
+    height: 100%;
+}
+
+a:link {
+    color: #f68f67;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bde2df;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #f68f67;
+    text-decoration: none;
+}
+
+.parallaxText {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+img.scale-with-grid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* End of Common
+--------------------------------------------------------*/
+
+/* Layout 
+--------------------------------------------------------*/
+    
+.homepage{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: -70px;
+}
+.page {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 80px 0 40px;
+    background: #111; 
+    background-attachment: scroll;
+}
+
+/* End of Layout 
+--------------------------------------------------------*/
+
+/* parallax
+--------------------------------------------------------*/
+
+.parallax{
+    width: 100%;
+    height: 800px; 
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    border-top: 10px solid rgba(0,0,0,0.2);
+    border-bottom: 10px solid rgba(0,0,0,0.2);
+    color: #000;  
+    position: relative;
+}
+.parallax .quoteWrap{
+    display: table;
+    width: 100%;
+    height: 100%; 
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.parallax.fixed{
+    background-attachment: fixed;
+}
+.parallax.fixed-desktop{
+    background-attachment: fixed !important;
+}
+.parallax .quoteWrap .quote{
+    display: table-cell; 
+    vertical-align: middle;
+}
+.parallax {
+    text-align: center;
+}
+.parallax h3 span{
+    text-shadow: 0px 0px 5px #222;
+}
+.parallax .creditContainer{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: white;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.2);
+}
+.parallax .description{
+    text-transform: uppercase;
+}
+
+/* End of parallax
+--------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------------------*/
+
+h1, h2, h3, h4 {
+    font-weight: 300;
+    font-family: 'Oswald',sans-serif;
+    color: #fff;
+    margin: 0 0 6px;
+}
+
+h1 {
+    font-size: 250px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: -2px;
+    text-align: left;
+    line-height: 0.8;
+    margin-bottom: 35px;
+    padding-top: 15px;
+}
+h1 span{
+    color: #7B133C;
+    font-size: 150px;
+}
+
+h2 {
+    font-size: 44px;
+    text-transform: uppercase;
+    position: relative;
+}
+h2.white {color: #fff;}
+
+h3 {font-size: 22px; line-height: 1;}
+h3.sectionTitle {
+    border-bottom: 1px solid #333;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 26px 0 6px;
+}
+.small {font-size: 36px; font-weight:300; text-transform: uppercase;}
+.smallBold {font-size: 36px; font-weight:700; text-transform: uppercase;}
+.medium {font-size: 44px; text-transform: uppercase;}
+.mediumBold {font-size: 44px; font-weight:700; text-transform: uppercase;}
+.large {font-size: 56px; text-transform: uppercase;}
+.largeBold {font-size: 56px; font-weight:700; text-transform: uppercase;}
+.date {font-size: 20px; font-weight:300;}
+.credit {font-size: 14px; font-weight:300;}
+
+h4 {font-size: 22px;}
+
+p {margin-bottom: 10px;}
+p a {color: #fff; text-decoration: none;}
+p a:hover {color: #7B133C; transition: color 0.5s;}
+a {color:#fff; text-decoration:none;}
+a:hover{color:#7B133C;}
+
+.introtext {font-size: 20px;}
+.marginTop {
+    margin-top: 30px;
+}
+.highlight {
+    background: #7B133C;
+    color: #FFFFFF;
+    padding: 0 6px;
+}
+.dropcap {
+    background: #7B133C;
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    height: 44px;
+    line-height: 44px;
+    margin: 7px 7px 0 0;
+    text-align: center;
+    width: 44px;
+}
+blockquote {
+    color: #999999;
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0;
+    padding: 20px 50px 20px 40px;
+    position: relative;
+}
+blockquote:before, blockquote:after {
+    color: #7B133C;
+    content: "â€œ";
+    font-size: 80px;
+    font-style: italic;
+    left: -25px;
+    line-height: 1em;
+    position: absolute;
+    top: 0;
+}
+blockquote:after {
+    content: "â€";
+    float: right;
+    margin-right: -30px;
+    margin-top: 0;
+    position: relative;
+}
+
+/* End of Typography
+--------------------------------------------------------*/
+
+/* footer
+--------------------------------------------------------*/  
+
+#footer{
+    position:relative; 
+    overflow:hidden; 
+    padding:30px 0 50px 0; 
+    z-index:1;
+    background:#111;
+}
+#footer p{
+    margin-bottom:0;
+    text-align: center;
+    color: #888888;
+}
+
+/*End of footer
+--------------------------------------------------------*/
+
+/* Media Queries
+--------------------------------------------------------*/
+
+/* Smaller than standard 1199 (devices and browsers) */
+@media only screen and (max-width: 1199px) {
+    .parallax.fixed{background-attachment:scroll; background-position: center center;}
+}
+
+/* Higher than 960 (desktop devices) */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    input[type="text"], input[type="password"], input[type="email"], textarea, select {width: 290px;}
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .small {font-size: 30px; font-weight:300;}
+    .smallBold {font-size: 30px; font-weight:700;}
+    .medium {font-size: 38px; text-transform: uppercase;}
+    .mediumBold {font-size: 38px; font-weight:700; text-transform: uppercase;}
+    .large {font-size: 50px; text-transform: uppercase;}
+    .largeBold {font-size: 50px; font-weight:700; text-transform: uppercase;}
+    .author {font-size: 16px; font-weight:300;}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    h1 {font-size: 200px;}
+    input[type="text"], input[type="password"], input[type="email"], textarea, select {width: 226px;}
+    .parallax.fixed{background-attachment:scroll; background-position: center center;}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    .parallax.fixed{background-attachment:scroll; background-position: center center;}
+    .homepage {margin-bottom: -50px;}
+}
+    
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    h1 {font-size: 110px;}
+    h1 span{font-size: 80px;}
+    input[type="text"], input[type="password"], input[type="email"], textarea, select {width: 418px;}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    h1 {font-size: 80px;}
+    h1 span{font-size: 60px;}
+    input[type="text"], input[type="password"], input[type="email"], textarea, select {width: 298px;}
+}
+
+/* End of Media Queries
+--------------------------------------------------------*/
