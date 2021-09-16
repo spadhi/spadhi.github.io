@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,14 +28,33 @@
       </div>
       <textarea id="text-content"></textarea>
       <input id="talk-lang" type="button" value="Synthesize "/>
-    
+      <select id="select-voice">
+
+      </select>
+      <input id="load-voices" type="button" value="Load voices"/>
+      <div id="voices-item"></div>
     </div>
     <script>
     $("#talk-lang").click(function(){
         artyom.say($("#text-content").val());
     });
 
-  
+    $("#select-voice").change(function(){
+        var lang = $(this).val();
+
+        artyom.initialize({lang:lang});
+    });
+
+    document.getElementById("load-voices").addEventListener("click", function(){
+        var voices = artyom.getVoices();
+        var html = "";
+
+        voices.forEach(function(voice){
+            html += "Voz name : " + voice.name + " con lang : " + voice.lang + "<br>";
+        });
+
+        document.getElementById("voices-item").innerHTML = html;
+    }, false);
       // Now we add the most important point of the plugin, the commands
       // This library is very flexible and now we will see why :
       // Every command is a literal object
@@ -49,7 +67,7 @@
 
               if(i == 0){
                 //You say : "hello"
-                document.getElementById('time').innerHTML = "Hello ! How are you";
+                document.getElementById('time').innerHTML = "Hello ! How are you? I don't want to talk today";
               }
           }
         },
