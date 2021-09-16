@@ -2,18 +2,16 @@
 <html>
 <head>
 	<title>index</title>
-	
+	<script>
+		// fetch episode
+		var obj;
+		fetch('https://spadhi.github.io/json/ep1.json')
+		  .then(res => res.json())
+		  .then(data => obj = data)
+		  .then(() => console.log(obj))
+	</script>
 </head>
 <body>
-
-<script>
-	fetch("test.json")
-  .then(response => response.json())
-  .then(json => console.log(json));
-
-	</script>
-
-
 
 </body>
 </html>
