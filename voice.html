@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Cooking with artyom.js</title>
+<!-- Important to load artyom in the head tag, this give time to load all the voices in the browser -->
+	<script type="text/javascript" src="js/artyom.window.min.js">
+	</script>
+	<script>
+		window.artyom = new Artyom();
+	</script>
+</head>
+<body>
+<script>
+	//commands
+	var commands = [
+	    {
+	indexes: ["Hello"],
+	action: function(){
+	    alert("Hello, how are you ?");
+	}
+	    },
+	    {
+	indexes: ["Good night"],
+	action: function(){
+	    alert("Hello, how are you ?");
+	}
+	    },
+	    {
+	indexes: ["Good morning"],
+	action: function(){
+	    alert("Hello, how are you ?");
+	}
+	    }
+	];
+	
+	var artyom = new Artyom();
+	
+	artyom.addCommands(commands);
+	
+	//artyom.simulateInstruction("Hello");
+</script>
+<script>
+	
+	
+	function start(){
+	artyom.initialize({
+	   lang:"en-GB",// More languages are documented in the library
+	   continuous:false,//if you have https connection, you can activate continuous mode
+	   debug:true,//Show everything in the console
+	   listen:true // Start listening when this function is triggered
+	});
+	}
+	
+	function stop(){
+	artyom.fatality();
+	}
+	
+</script>
+
+
+
+
+<div>
+	<input type="button" onclick="start()" value="Start Voice Commands" />
+	<br>
+	<input type="button" onclick="stop()" value="Stop listening" />
+	<br>
+</div>
+
+
+
+
+
+
+
+
+
+	<script>
+		
+		
+	</script>
+</body>
+</html>
