@@ -67,7 +67,7 @@
 <script>
 	function start(){
 	        artyom.initialize({
-	          lang:"en-GB",// More languages are documented in the library
+	          lang:"en-US",// More languages are documented in the library
 	          continuous:false,//if you have https connection, you can activate continuous mode
 	          debug:true,//Show everything in the console
 	          listen:true // Start listening when this function is triggered
@@ -77,6 +77,22 @@
 	      function stop(){
 	        artyom.fatality();
 	      }
+	      
+
+function welcomeMessage(){
+artyom.say("Thank You Ladies and Gentlemen... Welcome to our show and this week we have Art Ball and Cat as categories for you");
+}	      
+  
+function askQuestion(question) {
+artyom.say(question);
+
+}
+
+
+
+
+	      
+	      
 </script>
 <div>
 <span id="output" style="font-size:20px;color:red;"></span><br>
@@ -85,6 +101,14 @@
 	<br>
 	<input type="button" onclick="stop()" value="Stop listening" />
 	<br>
+	<input type="button" onclick="welcomeMessage()" value="welcome Message" />
+	<br>
+	
+	<input type="button" onclick="askQuestion('insta famous and meme-worthy')" value="Cat $300 Question" />
+	<br>
+	
+	
+	
 </div>
 <div class="grid-container">
 	<div id="art" class="grid-item">
